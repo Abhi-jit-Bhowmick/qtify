@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    min-width: 568px;
+}
+
+.form input {
+    flex: 1;
+    border-radius: 8px 0px 0px 8px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid var(--color-black);
+
+}
+
+.form button {
+    width: 66px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 8px 8px 0px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid var(--color-black);
+}

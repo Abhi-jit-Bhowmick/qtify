@@ -1,0 +1,31 @@
+.hs-container {
+    width: 100vw;
+    height: 270px;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hs-heading-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hs-heading-text p {
+    color: var(--color-white);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hs-img-frame {
+    width: 212px;
+    height: 212px;
+}
+
+.hs-img-frame img {
+    width: 100%;
+    height: 100%;
+}

@@ -6,9 +6,9 @@ import Button from '../Button/Button'
 function Navbar() {
     return (
         <div className='navbar'>
-            <h2>LOGO</h2>
+            <img src='./logo.png' alt='logo' width="67px" height="34px" />
             <Searchbar />
-            <Button />
+            <Button >{"Give Feedback"}</Button>
         </div>
     )
 }
