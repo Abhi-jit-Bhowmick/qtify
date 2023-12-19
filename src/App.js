@@ -6,6 +6,7 @@ import Cardgrid from './Components/Cardgrid/Cardgrid'
 import { config } from './Config/Endpoint'
 import axios from 'axios'
 import FilterSection from './Components/FilterSection/FilterSection'
+import Faq from './Components/Faqs/Faq'
 
 
 function App() {
@@ -110,6 +111,7 @@ function App() {
         navId={"filter-album"}
       />
       <hr />
+      <Faq />
 
     </>
   )

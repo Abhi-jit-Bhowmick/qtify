@@ -16,6 +16,7 @@ function Carosel({ data, navId }) {
     return (
         <div className='carosel-container'>
             <Swiper
+                className='swiper'
                 modules={[Virtual, Navigation, Pagination]}
                 // onSwiper={setSwiperRef}
                 slidesPerView={7}

@@ -1,6 +1,7 @@
 .carosel-container {
     position: relative;
-    height: auto;
+
+
 }
 
 .arrow-btn {
@@ -27,4 +28,8 @@
     position: absolute;
     top: 40%;
     right: 10px;
+}
+
+.swiper {
+    height: 280px;
 }
