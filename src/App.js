@@ -78,7 +78,7 @@ function App() {
 
 
   return (
-    console.log(filteredSong),
+    // console.log("topAlbums FROM APP::", topAlbums),
     <>
       <Navbar />
       <Herosection />

@@ -11,6 +11,7 @@ import "./Carosel.css"
 import Card from '../Card/Card';
 
 
+
 function Carosel({ data, navId }) {
 
     return (
@@ -30,7 +31,7 @@ function Carosel({ data, navId }) {
             >
                 {
                     data.map((item) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={item.id}>
                             <Card
                                 data={item}
                                 key={item.id}
@@ -47,6 +48,7 @@ function Carosel({ data, navId }) {
                 <img src='./rightarrow.png' alt='rightarrow' />
             </div>
         </div>
+
     )
 }
 
