@@ -15,9 +15,50 @@
     padding: 32px;
     /* border: 20px solid none; */
     background-color: var(--color-black);
+    height: auto;
 }
 
 .song-album-grid h3 {
     color: var(--color-white);
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
+
+.grid-navigation-headers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-navigation-headers h4 {
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.disabled-true {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--color-white);
+    gap: 10px;
+}
+
+.select-option {
+    margin-bottom: 10px;
+}
+
+.select-option option {
+    padding: 3px;
+    cursor: pointer;
+}
+
+.disabled-false {
+    display: none;
+}
+
+.genre-all,
+.genre-pop,
+.genre-jazz,
+.genre-rock,
+.genre-blues {
+    border-bottom: 5px solid var(--color-green);
+}
+
+.genre-pop {}
