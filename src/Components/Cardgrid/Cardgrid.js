@@ -12,7 +12,6 @@ function Cardgrid({ album_name, cardData, navId
 
 
     return (
-        console.log(" FROM CARDGRID::", cardData),
         <div className='song-album-grid'>
             <div className='grid-navigation-headers'>
                 <h3>{album_name}</h3>
