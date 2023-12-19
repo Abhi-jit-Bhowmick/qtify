@@ -14,7 +14,6 @@ function Card({ data }) {
     } = data
 
     return (
-        console.log("FROM CARD::", data),
         < Tooltip
             title={`${songs ? songs.length : ""} Songs`}
             arrow

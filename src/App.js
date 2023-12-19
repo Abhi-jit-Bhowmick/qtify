@@ -78,7 +78,6 @@ function App() {
 
 
   return (
-    // console.log("topAlbums FROM APP::", topAlbums),
     <>
       <Navbar />
       <Herosection />
