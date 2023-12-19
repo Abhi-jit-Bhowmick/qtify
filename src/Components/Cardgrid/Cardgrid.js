@@ -5,7 +5,7 @@ import Carosel from '../Carosel/Carosel';
 
 
 
-function Cardgrid({ album_name, cardData,
+function Cardgrid({ album_name, cardData, navId
     // disabled, handelClick, className 
 }) {
     const [isCollapsed, setIsCollapsed] = useState(true)
@@ -62,7 +62,11 @@ function Cardgrid({ album_name, cardData,
             </div> */}
             {
                 isCollapsed ? (
-                    <Carosel data={cardData} />
+                    <Carosel
+                        data={cardData}
+                        navId={navId}
+
+                    />
                 ) : (<div className='card-grid-container'>
                     {
                         cardData ? (

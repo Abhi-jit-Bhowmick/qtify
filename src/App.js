@@ -84,6 +84,7 @@ function App() {
       <Cardgrid
         album_name={"Top Album"}
         cardData={topAlbums}
+        navId={"top-album"}
       // disabled={false}
       />
       <hr />
@@ -91,6 +92,7 @@ function App() {
         // disabled={false}
         album_name={"New Album"}
         cardData={newAlbums}
+        navId={"new-album"}
       />
       <hr />
       {/* <Cardgrid
@@ -105,6 +107,7 @@ function App() {
         album_name={"All Songs"}
         cardData={filteredSong}
         filterSongsByGenres={filterSongsByGenresFunction}
+        navId={"filter-album"}
       />
       <hr />
 

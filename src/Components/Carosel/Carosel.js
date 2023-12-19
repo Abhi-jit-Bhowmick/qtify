@@ -11,7 +11,7 @@ import "./Carosel.css"
 import Card from '../Card/Card';
 
 
-function Carosel({ data }) {
+function Carosel({ data, navId }) {
 
     return (
         <div className='carosel-container'>
@@ -24,7 +24,7 @@ function Carosel({ data }) {
                 // pagination={{
                 //     type: 'fraction',
                 // }}
-                navigation={{ prevEl: ".left-arrow", nextEl: ".right-arrow" }}
+                navigation={{ prevEl: `.left-arrow-${navId}`, nextEl: `.right-arrow-${navId}` }}
                 virtual
             >
                 {
@@ -39,10 +39,10 @@ function Carosel({ data }) {
                 }
 
             </Swiper>
-            <div className='left-arrow arrow-btn'>
+            <div className={`left-arrow-${navId} left-arrow arrow-btn`}>
                 <img src='./leftarrow.png' alt='leftarrow' />
             </div>
-            <div className='right-arrow arrow-btn'>
+            <div className={`right-arrow-${navId} right-arrow arrow-btn`}>
                 <img src='./rightarrow.png' alt='rightarrow' />
             </div>
         </div>
