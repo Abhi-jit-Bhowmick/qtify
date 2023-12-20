@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import "./Searchbar.css";
 import { ReactComponent as SearchIcon } from './searchicon.svg'
-const arr = [1, 2, 3,]
 
 
 
 
-function Searchbar() {
+function Searchbar({ filterMenuSuggestionArrayFunction }) {
     const [inputfield, setInputField] = useState("");
+    const [menu, setmenu] = useState([]);
 
     const handleInputChange = (e) => {
         const input = e.target.value;
         setInputField(input)
+        setmenu(filterMenuSuggestionArrayFunction(inputfield))
     }
 
     return (
@@ -29,8 +30,8 @@ function Searchbar() {
                 className={` ${inputfield ? "searchbar-suggestion-container" : "not-display"}`}
             >
                 {
-                    arr.map(item => (
-                        <Menu />
+                    menu?.map(item => (
+                        <Menu data={item} />
                     ))
                 }
             </div>
@@ -39,19 +40,27 @@ function Searchbar() {
 }
 
 
-const Menu = () => {
+const Menu = ({ data }) => {
+    const {
+        image,
+        follows,
+        title,
+        description,
+        songs
+    } = data
 
     return (
+        console.log(data),
         <div className='searchbar-suggestion-flex-container'>
             <div className='suggestion-image'>
-                <img src='https://images.pexels.com/photos/462331/pexels-photo-462331.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800' alt='name' />
+                <img src={image} alt={title} />
             </div>
             <div className='suggestion-text'>
-                <p>Album Name</p>
-                <p> Somethis about tge album..</p>
+                <p>{title}</p>
+                <p className='description'>{`${description.slice(0, 50)}...`}</p>
             </div>
             <div className='suggestion-follows'>
-                100 Follows
+                {follows} Follows
             </div>
         </div>
     )

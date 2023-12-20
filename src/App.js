@@ -14,6 +14,18 @@ function App() {
   const [newAlbums, setNewAlbums] = useState([])
   const [songs, setSongs] = useState([])
   const [filteredSong, setFilteredSong] = useState([])
+
+
+  const filterMenuSuggestionArrayFunction = (input) => {
+    const menuArr = [...topAlbums, ...newAlbums,]
+    console.log(input)
+    const result = menuArr.filter((item) => {
+      return item.description.toLowerCase().startsWith(input.toLowerCase()) || item.slug.toLowerCase().startsWith(input.toLowerCase())
+    }
+    )
+    return result
+  }
+
   // const [allSongs, setAllSongs] = useState([])
   // const [filteredSong, setFilteredSong] = useState(allSongs)
   // const [genre, setGenre] = useState("all")
@@ -47,6 +59,7 @@ function App() {
   }
 
   const fetchedData = async () => {
+
     const topAlbumURL = `${config.backendEndpoint}/albums/top`
     const newAlbumURL = `${config.backendEndpoint}/albums/new`
     const allSongsURL = `${config.backendEndpoint}/songs`
@@ -68,7 +81,6 @@ function App() {
     const ALL_SONG_Response_Data = ALL_SONG_Response.data;
     setSongs(ALL_SONG_Response_Data)
     setFilteredSong(ALL_SONG_Response_Data)
-
   }
 
   useEffect(() => {
@@ -78,8 +90,11 @@ function App() {
 
 
   return (
+    // console.log(filterMenuSuggestionArray("disto")),
     <>
-      <Navbar />
+      <Navbar
+        filterMenuSuggestionArrayFunction={filterMenuSuggestionArrayFunction}
+      />
       <Herosection />
       <Cardgrid
         album_name={"Top Album"}

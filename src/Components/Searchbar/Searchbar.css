@@ -1,9 +1,12 @@
 .form {
     display: flex;
     min-width: 568px;
+    flex-direction: row;
+    gap: 0px;
 }
 
 .form input {
+    height: 48px;
     flex: 1;
     border-radius: 8px 0px 0px 8px;
     padding: 8px;
@@ -34,7 +37,7 @@
     padding: 10px;
     position: absolute;
     left: -17px;
-    /* right: 250px; */
+
     Width: 611px;
     max-height: 400px;
     border: 2px solid var(--color-green);
@@ -49,7 +52,7 @@
 .searchbar-suggestion-flex-container {
     display: flex;
     cursor: pointer;
-
+    padding: 5px;
 }
 
 .suggestion-image {
@@ -72,13 +75,11 @@
 }
 
 .suggestion-follows {
-    width: 100px;
+    width: 120px;
     height: 71px;
     display: flex;
     align-items: center;
-
     padding: 5px;
-
 }
 
 .suggestion-follows p {
@@ -87,6 +88,10 @@
 
 }
 
+.description {
+    font-size: 12px;
+    font-weight: 400;
+}
 
 .not-display {
     display: none;
