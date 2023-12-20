@@ -14,7 +14,12 @@ function Button({ children }) {
             >
                 {children}
             </button>
-            <div className={`button-click-form button-click-form-${isClickFeedback} `}>
+            <div
+                className={
+                    `button-click-form 
+                    button-click-form-${isClickFeedback ? "not-clicked" : "clicked"} `
+                }
+            >
                 <div className='feedback-head'>
                     <p>Feedback</p>
                     <IoMdClose

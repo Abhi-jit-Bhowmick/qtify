@@ -46,7 +46,6 @@ const Menu = ({ data }) => {
         follows,
         title,
         description,
-        songs
     } = data
 
     return (
