@@ -4,20 +4,20 @@ import { IoMdClose } from "react-icons/io";
 import "./Button.css"
 
 function Button({ children }) {
-    const [isClickFeedback, setIsClickedFeedback] = useState("false")
+    const [isClickFeedback, setIsClickedFeedback] = useState(false)
     return (
 
         <div div className='button-container' >
             <button
                 className='button'
-                onClick={() => { setIsClickedFeedback(true) }}
+                onClick={() => setIsClickedFeedback(true)}
             >
                 {children}
             </button>
             <div
                 className={
                     `button-click-form 
-                    button-click-form-${isClickFeedback ? "not-clicked" : "clicked"} `
+                    button-click-form-${isClickFeedback ? "clicked" : "not-clicked"} `
                 }
             >
                 <div className='feedback-head'>
